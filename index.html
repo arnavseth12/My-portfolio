@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="Screenshot 2025-11-06 4.45.32 PM.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+        body {
+            background-color: #DDE6ED;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins';
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        a {
+            color: #526D82;
+            text-decoration: none;
+        }
+        li {
+            text-decoration: none;
+            list-style: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .greeting{
+            font-size: 20px;
+            text-align: center;
+            color: #526D82;
+            margin-top: 40px;
+        }
+
+        .name{
+            font-size: 40px;
+            text-align: center;
+            color: #27374D;
+            margin-top: 20px;
+        }
+
+        .skills{
+            font-size: 20px;
+            text-align: center;
+            color: #526D82;
+            margin-top: 5px;
+            font-weight: 400;
+        }
+        .skill{
+            font-size: 30px;
+            color: #526D82;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .HTML{
+            font-size: 15px;
+            width: 140px;
+            height: 40px;
+            background-color: #DDE6ED;
+            border-color: #27374D;
+             border-style: solid;
+            border-width: 1px;
+            color: #27374D;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background-color 0.15s,
+            color 0.15s;
+            text-align: center;
+        }
+
+        .HTML:hover{
+            background-color: #27374D;
+            color: #DDE6ED ;
+        }
+
+        .CSS{
+            font-size: 15px;
+            width: 140px;
+            height: 40px;
+            background-color: #DDE6ED;
+            border-color: #27374D;
+             border-style: solid;
+            border-width: 1px;
+            color: #27374D;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background-color 0.15s,
+            color 0.15s;
+            text-align: center;
+        }
+
+        .CSS:hover{
+            background-color: #27374D;
+            color: #DDE6ED ;
+        }
+
+        .JAVASCRIPT{
+            font-size: 15px;
+            width: 140px;
+            height: 40px;
+            background-color: #DDE6ED;
+            border-color: #27374D;
+             border-style: solid;
+            border-width: 1px;
+            color: #27374D;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background-color 0.15s,
+            color 0.15s;
+            text-align: center;
+        }
+
+        .JAVASCRIPT:hover{
+            background-color: #27374D;
+            color: #DDE6ED ;
+        }
+
+        .PYTHON{
+            font-size: 15px;
+            width: 140px;
+            height: 40px;
+            background-color: #DDE6ED;
+            border-color: #27374D;
+             border-style: solid;
+            border-width: 1px;
+            color: #27374D;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background-color 0.15s,
+            color 0.15s;
+        }
+
+        .PYTHON:hover{
+            background-color: #27374D;
+            color: #DDE6ED ;
+        }
+
+        .my-projects{
+            font-size: 15px;
+            width: 140px;
+            height: 40px;
+            background-color: #DDE6ED;
+            border-color: #27374D;
+             border-style: solid;
+            border-width: 1px;
+            color: #27374D;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background-color 0.15s,
+            color 0.15s;
+        }
+
+        .my-projects:hover{
+            background-color: #27374D;
+            color: #DDE6ED ;
+        }
+        .my-projects:active{
+            opacity: 0.5;
+        }
+
+
+        .Contact-me{
+            font-size: 15px;
+            width: 140px;
+            height: 40px;
+            background-color: #DDE6ED;
+            border-color: #27374D;
+             border-style: solid;
+            border-width: 1px;
+            color: #27374D;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background-color 0.15s,
+            color 0.15s;
+        }
+
+        .Contact-me:hover{
+            background-color: #27374D;
+            color: #DDE6ED ;
+        }
+        .Contact-me:active{
+            opacity: 0.5;
+        }
+
+        .button-container button{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            display: inline-flex;
+            margin-top: 10px;
+        }
+
+        .button-container{
+            text-align: center;
+        }
+
+        .github img{
+            width: 30px;
+            height: 30px;
+        }
+
+        .github{
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .contact-projects{
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .Logo{
+            width: 40px;
+            height: 40px;
+        }
+        .hello-container {
+  text-align: center; /* Center the text */
+  font-family: 'Poppins', sans-serif; /* Choose a font */
+  font-size: 20px; /* Adjust font size */
+  color: #526D82; /* Set text color */
+}
+
+.letter {
+  display: inline-block; /* Allows individual transformation */
+  animation: bounce 1s infinite alternate ease-in-out; /* Apply animation */
+}
+
+/* Stagger the animation delay for each letter */
+.letter:nth-child(1) { animation-delay: 0s; }
+.letter:nth-child(2) { animation-delay: 0.1s; }
+.letter:nth-child(3) { animation-delay: 0.2s; }
+.letter:nth-child(4) { animation-delay: 0.3s; }
+.letter:nth-child(5) { animation-delay: 0.4s; }
+.letter:nth-child(6) {animation-delay: 0.5s ; }
+
+/* Define the 'bounce' animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end sat original position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move up in the middle of the animation */
+  }
+}
+</style>
+    <nav>
+        
+        <ul>
+            <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
+            <a href="index.html"><li>Home</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="contact.html"><li>Contact me</li></a>
+            <a href="about.html"><li>About</li></a>
+        </ul>
+    </nav>
+</head>
+<body>
+
+<div class="hello-container">
+  <span class="letter">H</span>
+  <span class="letter">e</span>
+  <span class="letter">l</span>
+  <span class="letter">l</span>
+  <span class="letter">o</span>
+  <span class="letter">,</span>
+</div>
+    <h1 class="name">
+        I'm Arnav
+    </h1>
+
+    <h1 class="skills">
+        I am an aspiring Full-Stack developer
+    </h1>
+<div class="button-container">
+    <h1 class="skill">
+        My skills:
+    </h1>
+    
+    <button class="HTML">
+        HTML
+    </button>
+
+
+    <button class="CSS">
+        CSS
+    </button>
+
+    <button class="JAVASCRIPT">
+        JAVASCRIPT
+    </button>
+
+    <button class="PYTHON">
+        PYTHON
+    </button>
+    </div>
+    <div class="contact-projects">
+        <a href="contact.html">
+            <button class="Contact-me">
+                Contact Me
+            </button>
+        </a>
+        <a href="projects.html">
+            <button class="my-projects">
+                My Projects
+            </button>
+        </a>
+    </div>
+
+    <div class="github">
+    <a href="http://github.com/arnavseth12" target="_blank">
+        <img src="Github-no-background.png" alt="Img of github logo" >
+    </a>
+    </div>
+</body>
+</html>

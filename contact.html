@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="icon" href="Screenshot 2025-11-06 4.45.32 PM.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+        *{
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        .contact-section{
+            background: #DDE6ED;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .inner-width{
+            max-width: 600px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .contact-section h1{
+            font-size: 20px;
+            color: #526D82;
+            margin-bottom:40px ;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 400;
+        }
+
+        .name, .email,.message{
+            background: none;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid;
+            color: #526D82;
+            padding: 10px 6px;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .name{
+            float: left;
+            width: 270px;
+        }
+
+        .email{
+            float: right;
+            width: 270px;
+        }
+
+        .message{
+            min-width:100%;
+            max-width: 100%;
+        }
+
+        .contact-section button{
+            background: none;
+            color: #526D82;
+            border: 1px solid #526D82;
+            padding: 12px 40px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.4s linear;
+            cursor: pointer;
+        }
+
+        .contact-section button:hover{
+            background: #526D82;
+            color:#DDE6ED;
+        }
+
+
+        @media screen and (max-width:600px){
+            .name,.email{
+                width: 100%;
+            }
+        }
+
+
+        
+        body {
+            background-color: #DDE6ED;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Poppins';
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        a {
+            color: #526D82;
+            text-decoration: none;
+        }
+        li {
+            text-decoration: none;
+            list-style: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .Logo{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
+            <a href="index.html"><li>Home</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="contact.html"><li>Contact me</li></a>
+            <a href="about.html"><li>About</li></a>
+        </ul>
+    </nav>
+
+    <form action="https://formspree.io/f/manlrakp" method="post">
+ <div class="contact-section">
+    <div class="inner-width">
+        <h1>Get in touch with me</h1>
+        <input type="text" class="name" placeholder="Your Name" required>
+        <input type="email" class="email" placeholder="Your Email" name="email" required>
+        <textarea rows="1" placeholder="Message" class="message" name="message" required></textarea>
+        <button type="submit">Submit</button>
+    </div>
+ </div>
+ </form>
+
+</body>
+</html>
