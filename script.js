@@ -35,3 +35,5 @@ function typeWriter(elementId, text, speed = 80) {
     }
     setTimeout(type, 400);
 }
+
+
