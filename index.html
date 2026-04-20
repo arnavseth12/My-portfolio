@@ -5,328 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="icon" href="Screenshot 2025-11-06 4.45.32 PM.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        
-        body {
-            background-color: #DDE6ED;
+        .hero {
             display: flex;
             flex-direction: column;
-            font-family: 'Poppins';
-        }
-        ul {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-            font-size: 20px;
-            margin-top: 20px;
-        }
-        a {
-            color: #526D82;
-            text-decoration: none;
-        }
-        li {
-            text-decoration: none;
-            list-style: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .greeting{
-            font-size: 20px;
-            text-align: center;
-            color: #526D82;
-            margin-top: 40px;
-        }
-
-        .name{
-            font-size: 40px;
-            text-align: center;
-            color: #27374D;
-            margin-top: 20px;
-        }
-
-        .skills{
-            font-size: 20px;
-            text-align: center;
-            color: #526D82;
-            margin-top: 5px;
-            font-weight: 400;
-        }
-        .skill{
-            font-size: 30px;
-            color: #526D82;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .HTML{
-            font-size: 15px;
-            width: 140px;
-            height: 40px;
-            background-color: #DDE6ED;
-            border-color: #27374D;
-             border-style: solid;
-            border-width: 1px;
-            color: #27374D;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 8px;
-            transition: background-color 0.15s,
-            color 0.15s;
-            text-align: center;
-        }
-
-        .HTML:hover{
-            background-color: #27374D;
-            color: #DDE6ED ;
-        }
-
-        .CSS{
-            font-size: 15px;
-            width: 140px;
-            height: 40px;
-            background-color: #DDE6ED;
-            border-color: #27374D;
-             border-style: solid;
-            border-width: 1px;
-            color: #27374D;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 8px;
-            transition: background-color 0.15s,
-            color 0.15s;
-            text-align: center;
-        }
-
-        .CSS:hover{
-            background-color: #27374D;
-            color: #DDE6ED ;
-        }
-
-        .JAVASCRIPT{
-            font-size: 15px;
-            width: 140px;
-            height: 40px;
-            background-color: #DDE6ED;
-            border-color: #27374D;
-             border-style: solid;
-            border-width: 1px;
-            color: #27374D;
-            border-radius: 2px;
-            cursor: pointer;
-            margin-right: 8px;
-            transition: background-color 0.15s,
-            color 0.15s;
-            text-align: center;
-        }
-
-        .JAVASCRIPT:hover{
-            background-color: #27374D;
-            color: #DDE6ED ;
-        }
-
-        .PYTHON{
-            font-size: 15px;
-            width: 140px;
-            height: 40px;
-            background-color: #DDE6ED;
-            border-color: #27374D;
-             border-style: solid;
-            border-width: 1px;
-            color: #27374D;
-            border-radius: 2px;
-            cursor: pointer;
-            margin-right: 8px;
-            transition: background-color 0.15s,
-            color 0.15s;
-        }
-
-        .PYTHON:hover{
-            background-color: #27374D;
-            color: #DDE6ED ;
-        }
-
-        .my-projects{
-            font-size: 15px;
-            width: 140px;
-            height: 40px;
-            background-color: #DDE6ED;
-            border-color: #27374D;
-             border-style: solid;
-            border-width: 1px;
-            color: #27374D;
-            border-radius: 2px;
-            cursor: pointer;
-            margin-right: 8px;
-            transition: background-color 0.15s,
-            color 0.15s;
-        }
-
-        .my-projects:hover{
-            background-color: #27374D;
-            color: #DDE6ED ;
-        }
-        .my-projects:active{
-            opacity: 0.5;
-        }
-
-
-        .Contact-me{
-            font-size: 15px;
-            width: 140px;
-            height: 40px;
-            background-color: #DDE6ED;
-            border-color: #27374D;
-             border-style: solid;
-            border-width: 1px;
-            color: #27374D;
-            border-radius: 2px;
-            cursor: pointer;
-            margin-right: 8px;
-            transition: background-color 0.15s,
-            color 0.15s;
-        }
-
-        .Contact-me:hover{
-            background-color: #27374D;
-            color: #DDE6ED ;
-        }
-        .Contact-me:active{
-            opacity: 0.5;
-        }
-
-        .button-container button{
-            display: flex;
-            text-align: center;
             align-items: center;
-            justify-content: center;
-            gap: 15px;
-            display: inline-flex;
-            margin-top: 10px;
+            padding: 60px 20px 40px;
         }
 
-        .button-container{
-            text-align: center;
-        }
-
-        .github img{
-            width: 30px;
-            height: 30px;
-        }
-
-        .github{
-            text-align: center;
-            margin-top: 25px;
-        }
-
-        .contact-projects{
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .Logo{
-            width: 40px;
-            height: 40px;
-        }
         .hello-container {
-  text-align: center; /* Center the text */
-  font-family: 'Poppins', sans-serif; /* Choose a font */
-  font-size: 20px; /* Adjust font size */
-  color: #526D82; /* Set text color */
-}
+            font-size: 20px;
+            color: #526D82;
+            margin-bottom: 10px;
+        }
 
-.letter {
-  display: inline-block; /* Allows individual transformation */
-  animation: bounce 1s infinite alternate ease-in-out; /* Apply animation */
-}
+        .letter {
+            display: inline-block;
+            animation: bounce 1s infinite alternate ease-in-out;
+        }
 
-/* Stagger the animation delay for each letter */
-.letter:nth-child(1) { animation-delay: 0s; }
-.letter:nth-child(2) { animation-delay: 0.1s; }
-.letter:nth-child(3) { animation-delay: 0.2s; }
-.letter:nth-child(4) { animation-delay: 0.3s; }
-.letter:nth-child(5) { animation-delay: 0.4s; }
-.letter:nth-child(6) {animation-delay: 0.5s ; }
+        .letter:nth-child(1) { animation-delay: 0s; }
+        .letter:nth-child(2) { animation-delay: 0.1s; }
+        .letter:nth-child(3) { animation-delay: 0.2s; }
+        .letter:nth-child(4) { animation-delay: 0.3s; }
+        .letter:nth-child(5) { animation-delay: 0.4s; }
+        .letter:nth-child(6) { animation-delay: 0.5s; }
 
-/* Define the 'bounce' animation */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0); /* Start and end sat original position */
-  }
-  50% {
-    transform: translateY(-3px); /* Move up in the middle of the animation */
-  }
-}
-</style>
-    <nav>
-        
-        <ul>
-            <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
-            <a href="index.html"><li>Home</li></a>
-            <a href="projects.html"><li>Projects</li></a>
-            <a href="contact.html"><li>Contact me</li></a>
-            <a href="about.html"><li>About</li></a>
-        </ul>
-    </nav>
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-4px); }
+        }
+
+        .name {
+            font-size: 42px;
+            color: #27374D;
+            text-align: center;
+            min-height: 56px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background: #526D82;
+            margin-left: 3px;
+            animation: blink 0.8s infinite;
+            vertical-align: middle;
+            height: 38px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0; }
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #526D82;
+            font-weight: 400;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .skills-section {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .skills-section h2 {
+            font-size: 26px;
+            color: #526D82;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .skill-item {
+            margin-bottom: 18px;
+        }
+
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #27374D;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .skill-bar-bg {
+            background: #9DB2BF55;
+            border-radius: 20px;
+            height: 10px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 10px;
+            border-radius: 20px;
+            background: #526D82;
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 20px 0 10px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .github {
+            text-align: center;
+            margin: 20px 0 40px;
+        }
+
+        .github img {
+            width: 32px;
+            height: 32px;
+            transition: opacity 0.2s;
+        }
+
+        .github img:hover {
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
 
-<div class="hello-container">
-  <span class="letter">H</span>
-  <span class="letter">e</span>
-  <span class="letter">l</span>
-  <span class="letter">l</span>
-  <span class="letter">o</span>
-  <span class="letter">,</span>
+<nav>
+    <ul>
+        <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
+        <a href="index.html"><li>Home</li></a>
+        <a href="projects.html"><li>Projects</li></a>
+        <a href="contact.html"><li>Contact me</li></a>
+        <a href="about.html"><li>About</li></a>
+    </ul>
+</nav>
+
+<div class="hero fade-in">
+    <div class="hello-container">
+        <span class="letter">H</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">l</span>
+        <span class="letter">o</span>
+        <span class="letter">,</span>
+    </div>
+    <h1 class="name"><span id="typewriter"></span><span class="cursor"></span></h1>
+    <p class="subtitle">I am an aspiring Full-Stack Developer</p>
 </div>
-    <h1 class="name">
-        I'm Arnav
-    </h1>
 
-    <h1 class="skills">
-        I am an aspiring Full-Stack developer
-    </h1>
-<div class="button-container">
-    <h1 class="skill">
-        My skills:
-    </h1>
-    
-    <button class="HTML">
-        HTML
-    </button>
+<div class="skills-section fade-in">
+    <h2>My Skills</h2>
 
-
-    <button class="CSS">
-        CSS
-    </button>
-
-    <button class="JAVASCRIPT">
-        JAVASCRIPT
-    </button>
-
-    <button class="PYTHON">
-        PYTHON
-    </button>
-    </div>
-    <div class="contact-projects">
-        <a href="contact.html">
-            <button class="Contact-me">
-                Contact Me
-            </button>
-        </a>
-        <a href="projects.html">
-            <button class="my-projects">
-                My Projects
-            </button>
-        </a>
+    <div class="skill-item">
+        <div class="skill-label"><span>HTML</span><span>90%</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
     </div>
 
-    <div class="github">
+    <div class="skill-item">
+        <div class="skill-label"><span>CSS</span><span>80%</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+    </div>
+
+    <div class="skill-item">
+        <div class="skill-label"><span>JavaScript</span><span>65%</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="65"></div></div>
+    </div>
+
+    <div class="skill-item">
+        <div class="skill-label"><span>Python</span><span>55%</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="55"></div></div>
+    </div>
+</div>
+
+<div class="cta fade-in">
+    <a href="contact.html"><button class="btn">Contact Me</button></a>
+    <a href="projects.html"><button class="btn">My Projects</button></a>
+</div>
+
+<div class="github fade-in">
     <a href="http://github.com/arnavseth12" target="_blank">
-        <img src="Github-no-background.png" alt="Img of github logo" >
+        <img src="Github-no-background.png" alt="GitHub logo">
     </a>
-    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    typeWriter('typewriter', "I'm Arnav", 90);
+
+    const bars = document.querySelectorAll('.skill-bar-fill');
+    const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const fill = entry.target;
+                fill.style.width = fill.dataset.width + '%';
+                barObserver.unobserve(fill);
+            }
+        });
+    }, { threshold: 0.3 });
+    bars.forEach(bar => barObserver.observe(bar));
+</script>
+
 </body>
 </html>

@@ -4,192 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Screenshot 2025-11-06 4.45.32 PM.png" type="image/x-icon">
-    <title>My projects</title>
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        body {
-            background-color: #DDE6ED;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Poppins';
+        .page-title {
+            text-align: center;
+            color: #27374D;
+            font-size: 32px;
+            font-weight: 600;
+            padding: 40px 20px 10px;
         }
-        ul {
+
+        .page-subtitle {
+            text-align: center;
+            color: #526D82;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .projects {
             display: flex;
             flex-direction: row;
-            gap: 15px;
-            font-size: 20px;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            padding: 20px 20px 60px;
         }
-        a {
+
+        .project-card {
+            background: #526D82;
+            width: 340px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px #27374D44;
+        }
+
+        .card-top {
+            padding: 22px 22px 10px;
+        }
+
+        .project-card h1 {
+            color: #DDE6ED;
+            font-weight: 500;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #DDE6EDb0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 14px;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 500;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background-color: #DDE6ED22;
+            color: #DDE6ED;
+            border: 1px solid #DDE6ED44;
+            letter-spacing: 0.5px;
+        }
+
+        .card-buttons {
+            padding: 16px 22px 22px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .card-btn {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            padding: 8px 16px;
+            background-color: transparent;
+            border: 1px solid #DDE6ED;
+            color: #DDE6ED;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.15s, color 0.15s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .card-btn:hover {
+            background-color: #DDE6ED;
             color: #526D82;
             text-decoration: none;
         }
-        li {
-            text-decoration: none;
-            list-style: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
 
-        .Logo{
-            width: 40px;
-            height: 40px;
-        }
-
-         .projects {
-         display: flex; /* Makes the container a flex container */
-          /* Distributes items with space around them */
-        gap: 20px; /* Adds space between items */
-    }
-
-        .pearsonal-portfolio{
-            border: none;
-            background: #526D82;
-            width: 350px;
-            height: 300px;
-            border-radius: 9px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .pearsonal-portfolio h1 {
-            margin-left: 20px;
-            margin-right: 20px;
-            color: #DDE6ED;
-            font-weight: 500;
-            margin-top: 20px;
-        }
-
-        .pearsonal-portfolio p {
-            margin-left: 20px;
-            margin-right: 20px;
-            color: #DDE6ED;
-        }
-
-        .pearsonal-portfolio button {
-            width: 100px;
-            height: 40px;
-            margin-bottom: 20px;
-            margin-right: 20px;
-            margin-left: 10px;
-            font-size: 15px;
-            background-color: #526D82;
-            border-color: #DDE6ED;
-            border-style: solid;
-            border-width: 1px;
-            color: #DDE6ED;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.15s,
-            color 0.15s
-        }
-
-        .pearsonal-portfolio button:hover {
-            background-color: #DDE6ED;
-            color: #526D82;
-        }
-
-        .pearsonal-portfolio button:active {
-            opacity: 0.7;
-        }
-
-        .password-generator{
-            border: none;
-            background: #526D82;
-            width: 350px;
-            height: 320px;
-            border-radius: 9px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .password-generator h1 {
-            margin-left: 20px;
-            margin-right: 20px;
-            color: #DDE6ED;
-            font-weight: 500;
-        }
-
-        .password-generator p {
-            margin-left: 20px;
-            margin-right: 20px;
-            color: #DDE6ED;
-        }
-
-        .password-generator button {
-            width: 100px;
-            height: 40px;
-            margin-bottom: 20px;
-            margin-right: 20px;
-            margin-left: 10px;
-            font-size: 15px;
-            background-color: #526D82;
-            border-color: #DDE6ED;
-            border-style: solid;
-            border-width: 1px;
-            color: #DDE6ED;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.15s,
-            color 0.15s
-        }
-
-        .password-generator button:hover {
-            background-color: #DDE6ED;
-            color: #526D82;
-        }
-
-        .password-generator button:active {
+        .card-btn:active {
             opacity: 0.7;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
-            <a href="index.html"><li>Home</li></a>
-            <a href="projects.html"><li>Projects</li></a>
-            <a href="contact.html"><li>Contact me</li></a>
-            <a href="about.html"><li>About</li></a>
-        </ul>
-    </nav>
+
+<nav>
+    <ul>
+        <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
+        <a href="index.html"><li>Home</li></a>
+        <a href="projects.html"><li>Projects</li></a>
+        <a href="contact.html"><li>Contact me</li></a>
+        <a href="about.html"><li>About</li></a>
+    </ul>
+</nav>
+
+<h1 class="page-title fade-in">My Projects</h1>
+<p class="page-subtitle fade-in">A collection of things I've built</p>
 
 <div class="projects">
-    <div class="pearsonal-portfolio">
-        <h1>
-            Pearsonal Portfolio Project
-        </h1>
-        <p>
-            This is a pearsonal Portfolio project that has all my experiences and has a page where you can contact me
-        </p>
-         <a href="index.html"><button>
-            Live demo
-        </button>
-        </a>
-        <a href="#">
-        <button>
-            Github repo
-        </button>
-        </a>
+
+    <div class="project-card fade-in">
+        <div class="card-top">
+            <h1>Personal Portfolio</h1>
+            <p>A personal portfolio site with pages for projects, an about section, and a contact form — the very site you're on.</p>
+            <div class="tech-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+            </div>
+        </div>
+        <div class="card-buttons">
+            <a href="index.html" class="card-btn">Live demo</a>
+            <a href="https://github.com/arnavseth12/My-portfolio/tree/main" class="card-btn">GitHub repo</a>
+        </div>
     </div>
 
-    <div class="password-generator">
-        <h1>
-            Password Generator project
-        </h1>
-        <p>
-            this password generator project is very minnimalistic with a clean design and generates a password 12 charecters long
-        </p>
-        <a href="https://arnavseth12.github.io/Password-generator/"><button>
-            Live demo
-        </button>
-        </a>
-        <a href="#">
-        <button>
-            Github repo
-        </button>
+    <div class="project-card fade-in">
+        <div class="card-top">
+            <h1>Password Generator</h1>
+            <p>A minimalistic password generator with a clean design that creates a secure 12-character password instantly.</p>
+            <div class="tech-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+            </div>
+        </div>
+        <div class="card-buttons">
+            <a href="https://arnavseth12.github.io/Password-generator/" class="card-btn">Live demo</a>
+            <a href="https://github.com/arnavseth12/Password-generator" class="card-btn">GitHub repo</a>
+        </div>
     </div>
+
+    <div class="project-card fade-in">
+        <div class="card-top">
+            <h1>Weather App</h1>
+            <p>A minimalistic weather app that fetches live data via API and displays it cleanly using JavaScript.</p>
+            <div class="tech-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">API</span>
+            </div>
+        </div>
+        <div class="card-buttons">
+            <a href="https://arnavseth12.github.io/Weather-app/" class="card-btn">Live demo</a>
+            <a href="https://github.com/arnavseth12/Weather-app" class="card-btn">GitHub repo</a>
+        </div>
+    </div>
+
+    <div class="project-card fade-in">
+        <div class="card-top">
+            <h1>To-Do List</h1>
+            <p>A minimal to-do list app with a clean design that saves your tasks to local storage so nothing gets lost on refresh.</p>
+            <div class="tech-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+            </div>
+        </div>
+        <div class="card-buttons">
+            <a href="https://arnavseth12.github.io/to-do-list/" class="card-btn">Live demo</a>
+            <a href="https://github.com/arnavseth12/to-do-list" class="card-btn">GitHub repo</a>
+        </div>
+    </div>
+
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>

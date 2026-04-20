@@ -5,139 +5,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact me</title>
     <link rel="icon" href="Screenshot 2025-11-06 4.45.32 PM.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        
-        *{
-            box-sizing: border-box;
-            font-family: 'Poppins';
+        .contact-wrapper {
+            max-width: 560px;
+            margin: 60px auto;
+            padding: 0 20px 80px;
         }
 
-        .contact-section{
-            background: #DDE6ED;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .inner-width{
-            max-width: 600px;
-            margin: auto;
-            padding: 0 20px;
+        .page-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #27374D;
+            margin-bottom: 8px;
         }
 
-        .contact-section h1{
-            font-size: 20px;
+        .page-subtitle {
             color: #526D82;
-            margin-bottom:40px ;
+            font-size: 13px;
+            margin-bottom: 40px;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 400;
+            letter-spacing: 3px;
         }
 
-        .name, .email,.message{
+        .field-group {
+            position: relative;
+            margin-bottom: 36px;
+        }
+
+        .field-group input,
+        .field-group textarea {
+            width: 100%;
             background: none;
             border: none;
+            border-bottom: 1px solid #9DB2BF;
             outline: none;
-            border-bottom: 1px solid;
+            color: #27374D;
+            padding: 12px 0 6px;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s;
+            resize: vertical;
+        }
+
+        .field-group textarea {
+            min-height: 80px;
+        }
+
+        .field-group input:focus,
+        .field-group textarea:focus {
+            border-bottom-color: #526D82;
+        }
+
+        .field-group label {
+            position: absolute;
+            left: 0;
+            top: 12px;
+            font-size: 15px;
+            color: #9DB2BF;
+            font-family: 'Poppins', sans-serif;
+            pointer-events: none;
+            transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+        }
+
+        .field-group input:focus + label,
+        .field-group input:not(:placeholder-shown) + label,
+        .field-group textarea:focus + label,
+        .field-group textarea:not(:placeholder-shown) + label {
+            top: -10px;
+            font-size: 11px;
             color: #526D82;
-            padding: 10px 6px;
-            font-size: 14px;
-            margin-bottom: 40px;
+            letter-spacing: 0.5px;
         }
 
-        .name{
-            float: left;
-            width: 270px;
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
-        .email{
-            float: right;
-            width: 270px;
+        @media (max-width: 480px) {
+            .two-col { grid-template-columns: 1fr; }
         }
 
-        .message{
-            min-width:100%;
-            max-width: 100%;
-        }
-
-        .contact-section button{
+        .submit-btn {
             background: none;
             color: #526D82;
             border: 1px solid #526D82;
-            padding: 12px 40px;
+            padding: 12px 44px;
             border-radius: 8px;
             text-transform: uppercase;
-            font-size: 14px;
-            transition: 0.4s linear;
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.25s, color 0.25s;
             cursor: pointer;
         }
 
-        .contact-section button:hover{
+        .submit-btn:hover {
             background: #526D82;
-            color:#DDE6ED;
+            color: #DDE6ED;
         }
 
-
-        @media screen and (max-width:600px){
-            .name,.email{
-                width: 100%;
-            }
+        .success-msg {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
         }
 
+        .success-msg .checkmark {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
 
-        
-        body {
-            background-color: #DDE6ED;
-            display: flex;
-            flex-direction: column;
-            font-family: 'Poppins';
+        .success-msg h2 {
+            color: #27374D;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 10px;
         }
-        ul {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-            font-size: 20px;
-            margin-top: 20px;
-        }
-        a {
+
+        .success-msg p {
             color: #526D82;
-            text-decoration: none;
-        }
-        li {
-            text-decoration: none;
-            list-style: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .Logo{
-            width: 40px;
-            height: 40px;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
-            <a href="index.html"><li>Home</li></a>
-            <a href="projects.html"><li>Projects</li></a>
-            <a href="contact.html"><li>Contact me</li></a>
-            <a href="about.html"><li>About</li></a>
-        </ul>
-    </nav>
 
-    <form action="https://formspree.io/f/manlrakp" method="post">
- <div class="contact-section">
-    <div class="inner-width">
-        <h1>Get in touch with me</h1>
-        <input type="text" class="name" placeholder="Your Name" required>
-        <input type="email" class="email" placeholder="Your Email" name="email" required>
-        <textarea rows="1" placeholder="Message" class="message" name="message" required></textarea>
-        <button type="submit">Submit</button>
+<nav>
+    <ul>
+        <img src="Screenshot 2025-11-06 4.45.32 PM.png" alt="Logo" class="Logo">
+        <a href="index.html"><li>Home</li></a>
+        <a href="projects.html"><li>Projects</li></a>
+        <a href="contact.html"><li>Contact me</li></a>
+        <a href="about.html"><li>About</li></a>
+    </ul>
+</nav>
+
+<div class="contact-wrapper">
+    <h1 class="page-title fade-in">Get in touch</h1>
+    <p class="page-subtitle fade-in">I'd love to hear from you *if it does not work my email is arnavseth26@gmail.com</p>
+
+    <form id="contact-form" action="https://formspree.io/f/manlrakp" method="post" class="fade-in">
+        <div class="two-col">
+            <div class="field-group">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Your Name</label>
+            </div>
+            <div class="field-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Your Email</label>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <textarea id="message" name="message" placeholder=" " rows="4" required></textarea>
+            <label for="message">Message</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <div class="success-msg" id="success-msg">
+        <div class="checkmark">✓</div>
+        <h2>Message sent!</h2>
+        <p>Thanks for reaching out — I'll get back to you soon.</p>
     </div>
- </div>
- </form>
+</div>
+
+<script src="script.js"></script>
+<script>
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+                form.style.display = 'none';
+                successMsg.style.display = 'block';
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch {
+            alert('Something went wrong. Please try again.');
+        }
+    });
+</script>
 
 </body>
 </html>
