@@ -11,11 +11,12 @@ html {
 }
 
 body {
-    background-color: #DDE6ED;
+    background-color: #1a2330;
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
+    color: #DDE6ED;
 }
 
 /* ── Nav ── */
@@ -23,8 +24,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #DDE6ED;
-    border-bottom: 1px solid #9DB2BF;
+    background-color: #1a2330;
+    border-bottom: 1px solid #27374D;
     padding: 0 20px;
 }
 
@@ -45,7 +46,7 @@ nav ul .Logo {
 }
 
 nav a {
-    color: #526D82;
+    color: #9DB2BF;
     text-decoration: none;
     padding: 4px 10px;
     border-radius: 6px;
@@ -54,16 +55,16 @@ nav a {
 
 nav a:hover {
     text-decoration: none;
-    background-color: #9DB2BF33;
+    background-color: #27374D55;
 }
 
 nav a.active {
-    background-color: #27374D;
+    background-color: #526D82;
     color: #DDE6ED;
 }
 
 a {
-    color: #526D82;
+    color: #9DB2BF;
     text-decoration: none;
 }
 
@@ -81,9 +82,9 @@ li {
     font-size: 15px;
     width: 140px;
     height: 40px;
-    background-color: #DDE6ED;
-    border: 1px solid #27374D;
-    color: #27374D;
+    background-color: #1a2330;
+    border: 1px solid #9DB2BF;
+    color: #DDE6ED;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.15s, color 0.15s;
@@ -93,7 +94,8 @@ li {
 }
 
 .btn:hover {
-    background-color: #27374D;
+    background-color: #526D82;
+    border-color: #526D82;
     color: #DDE6ED;
 }
 

@@ -2,8 +2,7 @@
 (function () {
     const page = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('nav a').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === page) link.classList.add('active');
+        if (link.getAttribute('href') === page) link.classList.add('active');
     });
 })();
 
