@@ -98,13 +98,18 @@
             font-size: 13px;
             letter-spacing: 1px;
             font-family: 'Poppins', sans-serif;
-            transition: background-color 0.25s, color 0.25s;
+            transition: background-color 0.25s, color 0.25s, opacity 0.25s;
             cursor: pointer;
         }
 
         .submit-btn:hover {
             background: #526D82;
             color: #DDE6ED;
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
 
         .success-msg {
@@ -129,6 +134,13 @@
             color: #9DB2BF;
             font-size: 15px;
         }
+
+        .error-msg {
+            display: none;
+            color: #e06c6c;
+            font-size: 13px;
+            margin-top: 12px;
+        }
     </style>
 </head>
 <body>
@@ -145,16 +157,16 @@
 
 <div class="contact-wrapper">
     <h1 class="page-title fade-in">Get in touch</h1>
-    <p class="page-subtitle fade-in">I'd love to hear from you *if it does not work email me at arnavseth26@gmail.com</p>
+    <p class="page-subtitle fade-in">I'd love to hear from you</p>
 
-    <form id="contact-form" action="https://formspree.io/f/manlrakp" method="post" class="fade-in">
+    <form id="contact-form" class="fade-in">
         <div class="two-col">
             <div class="field-group">
-                <input type="text" id="name" name="name" placeholder=" " required>
+                <input type="text" id="name" name="from_name" placeholder=" " required>
                 <label for="name">Your Name</label>
             </div>
             <div class="field-group">
-                <input type="email" id="email" name="email" placeholder=" " required>
+                <input type="email" id="email" name="from_email" placeholder=" " required>
                 <label for="email">Your Email</label>
             </div>
         </div>
@@ -164,7 +176,8 @@
             <label for="message">Message</label>
         </div>
 
-        <button type="submit" class="submit-btn">Send Message</button>
+        <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
+        <p class="error-msg" id="error-msg">Something went wrong. Please try again.</p>
     </form>
 
     <div class="success-msg" id="success-msg">
@@ -174,29 +187,33 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 <script>
-    const form = document.getElementById('contact-form');
-    const successMsg = document.getElementById('success-msg');
+    emailjs.init('JF9qF1Fa2ZecnPX83'); 
 
-    form.addEventListener('submit', async (e) => {
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('success-msg');
+    const errorMsg = document.getElementById('error-msg');
+
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
-        const data = new FormData(form);
-        try {
-            const res = await fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        errorMsg.style.display = 'none';
+
+        emailjs.sendForm('service_kc96lhd', 'template_73vcbaq', form) 
+            .then(() => {
                 form.style.display = 'none';
                 successMsg.style.display = 'block';
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
-        } catch {
-            alert('Something went wrong. Please try again.');
-        }
+            })
+            .catch(() => {
+                errorMsg.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            });
     });
 </script>
 
